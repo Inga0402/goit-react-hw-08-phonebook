@@ -10,7 +10,6 @@ import authSelectors from "./redux/auth/auth-selectors";
 import AppBar from "./components/PageHeader/AppBar";
 import "react-toastify/dist/ReactToastify.css";
 
-const HomePageView = lazy(() => import("./views/HomePageView"));
 const RegistrationView = lazy(() => import("./views/RegistrationView"));
 const LoginFormView = lazy(() => import("./views/LoginFormView"));
 const PhoneContactsView = lazy(() => import("./views/PhoneContactsView"));
@@ -37,9 +36,6 @@ export default function App() {
         <AppBar />
         <Switch>
           <Suspense fallback={<h2>Loading....</h2>}>
-            <PublicRoute exact path="/">
-              <HomePageView />
-            </PublicRoute>
             <PublicRoute
               exact
               path="/register"

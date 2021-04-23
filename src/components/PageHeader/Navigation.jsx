@@ -24,14 +24,6 @@ const Navigation = () => {
   const style = useStyles();
   return (
     <nav>
-      <NavLink
-        to="/"
-        exact
-        className={style.link}
-        activeClassName={style.activeLink}
-      >
-        Home
-      </NavLink>
       {isSignIn && (
         <NavLink
           to="/contacts"
